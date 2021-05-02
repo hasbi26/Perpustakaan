@@ -40,8 +40,8 @@ class User(models.Model):
         return self.username
 
 class Peminjaman(models.Model):
-    tanggalpinjam = models.DateTimeField("Tanggal Pinjam")
-    tanggalpengembalian = models.DateTimeField("Sale End Time")
+    tanggalpinjam = models.DateField("tanggalpinjam")
+    tanggalpengembalian = models.DateField("tanggalpengembalian")
     id_buku = models.IntegerField("id_buku")
     id_user = models.IntegerField("id_user")
     id_pelanggan = models.IntegerField("id_pelanggan")
